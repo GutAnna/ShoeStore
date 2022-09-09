@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <string name="login">Логин</string>
-    <string name="password">Пароль</string>
-    <string name="Login">Вход</string>
-    <string name="Registration">Регистрация</string>
-    <string name="registration">Нет аккаунта? Зарегистрироваться</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="Login">Enter</string>
+    <string name="Registration">Registration</string>
+    <string name="registration">No account? Register</string>
     <string name="welcome_to_">Welcome to JIMO shopping store</string>
     <string name="get_started">Get started</string>
     <string name="accept">accept</string>
@@ -14,4 +14,8 @@
     <string name="user_agreement">User agreement</string>
     <string name="add_product">add product</string>
     <string name="_1_general_provisions">1. General provisions</string>
+    <string name="ScreenEnter">Log in</string>
+    <string name="ScreenInstructions">Instructions</string>
+    <string name="ScreenList">List of products</string>
+    <string name="ScreenWelcome">Welcome</string>
 </resources>
