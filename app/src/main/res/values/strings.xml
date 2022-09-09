@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="Login">Вход</string>
+    <string name="Registration">Регистрация</string>
+    <string name="registration">Нет аккаунта? Зарегистрироваться</string>
+    <string name="welcome_to_">Welcome to JIMO shopping store</string>
+    <string name="get_started">Get started</string>
+    <string name="accept">accept</string>
+    <string name="_1_1_these_terms_">1.1. These Terms of Sale (hereinafter also referred to as the Term) regulate the procedure for purchasing goods offered for sale to Users on The Furniture Website, as well as the procedure for using the services of The Furniture Website.</string>
+    <string name="_1_2_these_terms">1.2. These Terms are a public offer in accordance with Articles 435, 437 of the Civil Code of the Russian Federation. Acceptance of these Terms is made by the User at the time of performing one of the following actions: registration on The Furniture Website; at the time of placing an order through The Furniture Website (if registration on the Website was not carried out by the User), by phone number, via chat or at the time of authorization on the Website via social networks.</string>
+    <string name="_1_3_these_terms_are_">1.3. These Terms are a public offer in accordance with Articles 435, 437 of the Civil Code of the Russian Federation. Acceptance of these Terms is made by the User at the time of performing one of the following actions: registration on The Furniture Website; at the time of placing an order through The Furniture Website (if registration on the Website was not carried out by the User), by phone number, via chat or at the time of authorization on the Website via social networks.</string>
+    <string name="user_agreement">User agreement</string>
+    <string name="add_product">add product</string>
+    <string name="_1_general_provisions">1. General provisions</string>
+</resources>
