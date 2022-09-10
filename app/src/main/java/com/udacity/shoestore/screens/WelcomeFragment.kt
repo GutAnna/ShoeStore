@@ -1,9 +1,10 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragWelcomeBinding
 
 class WelcomeFragment : Fragment(R.layout.frag_welcome) {
