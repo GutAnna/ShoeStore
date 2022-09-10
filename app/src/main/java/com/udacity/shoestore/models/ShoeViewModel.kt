@@ -8,8 +8,8 @@ import com.udacity.shoestore.models.Shoe
 class ShoeViewModel : ViewModel() {
 
     private val _shoe = MutableLiveData<Shoe>()
-    val shoe: LiveData<Shoe> = _shoe
-
+    val shoe: LiveData<Shoe>
+        get() = _shoe
 
     fun addShoe(
         name: String, size: Double, company: String, description: String,

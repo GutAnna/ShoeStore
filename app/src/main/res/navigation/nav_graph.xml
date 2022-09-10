@@ -12,7 +12,8 @@
         tools:layout="@layout/frag_login">
         <action
             android:id="@+id/action_loginFragment_to_instructionsFragment"
-            app:destination="@id/instructionsFragment" />
+            app:destination="@id/instructionsFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
@@ -22,7 +23,8 @@
 
         <action
             android:id="@+id/action_instructionsFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/listProductsFragment"
@@ -45,7 +47,7 @@
     <fragment
         android:id="@+id/itemShoeFragment"
         android:name="com.udacity.shoestore.screens.ItemShoeFragment"
-        android:label="fragment_item_shoe"
+        android:label="Shoe info"
         tools:layout="@layout/fragment_item_shoe" >
     </fragment>
 </navigation>
