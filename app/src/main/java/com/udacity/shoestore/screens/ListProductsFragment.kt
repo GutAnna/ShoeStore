@@ -1,13 +1,10 @@
 package com.udacity.shoestore.screens
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragListOfProductsBinding
@@ -27,8 +24,9 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
         }
 
         sharedViewModel.shoe.observe(viewLifecycleOwner, Observer { item ->
+           val view = layoutInflater.inflate(R.layout.frag_list_of_products, null)
 
-           binding.layoutContainer.addView()
+           binding.layoutContainer.addView(view)
         })
 
     }
