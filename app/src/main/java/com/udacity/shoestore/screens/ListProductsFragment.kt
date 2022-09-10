@@ -1,9 +1,7 @@
 package com.udacity.shoestore.screens
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -29,6 +27,7 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listProductsFragment_to_itemShoeFragment)
         }
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -44,6 +43,20 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
             )
             itemProductBinding.shoe = item
         })
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.logout -> {
+                findNavController().navigate(R.id.loginFragment)
+            }
+        }
+        return true
     }
 
 }
