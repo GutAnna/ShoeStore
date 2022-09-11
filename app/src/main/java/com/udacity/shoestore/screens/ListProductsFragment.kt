@@ -2,7 +2,6 @@ package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import android.view.*
-import android.widget.FrameLayout
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
@@ -35,18 +34,18 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedViewModel.shoe.observe(viewLifecycleOwner) { item ->
+        sharedViewModel.shoesList.observe(viewLifecycleOwner) { list ->
             val linearLayout = binding.layoutContainer
-            val ll1 = FrameLayout(requireContext())
-
-            val itemProductBinding = DataBindingUtil.inflate<ItemProductBinding>(
-                layoutInflater,
-                R.layout.item_product,
-                ll1,
-                false
-            )
-            itemProductBinding.shoe = item
-            linearLayout.addView(itemProductBinding.root)
+            for (item in list) {
+                val itemProductBinding = DataBindingUtil.inflate<ItemProductBinding>(
+                    layoutInflater,
+                    R.layout.item_product,
+                    linearLayout,
+                    true
+                )
+                itemProductBinding.shoe = item
+                //linearLayout.addView(itemProductBinding.root)
+            }
         }
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
