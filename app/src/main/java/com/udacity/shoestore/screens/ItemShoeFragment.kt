@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentItemShoeBinding
+import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeViewModel
 
 
@@ -24,20 +25,19 @@ class ItemShoeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_item_shoe, container, false)
-        navController = findNavController()
+        binding.shoe = Shoe("",null,"","")
         binding.btSave.setOnClickListener {
-            with(binding) {
-                sharedViewModel.addShoe(
-                    editTextItemName.text.toString(),
-                    editTextItemSize.text.toString().toDouble(),
-                    editTextItemCompany.text.toString(),
-                    editTextItemDescription.text.toString())
-            }
-            findNavController().navigateUp()
+           saveData()
         }
         binding.btCancel.setOnClickListener {
-            navController.navigateUp()
+            findNavController().navigateUp()
         }
         return binding.root
+    }
+
+    private fun saveData() {
+        val item = binding.shoe
+        with (item!!) {sharedViewModel.addShoe(name,size,company,description)}
+        findNavController().navigateUp()
     }
 }

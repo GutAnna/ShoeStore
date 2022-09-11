@@ -2,6 +2,7 @@ package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import android.view.*
+import androidx.activity.addCallback
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
@@ -18,6 +19,12 @@ import com.udacity.shoestore.models.ShoeViewModel
 class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
     lateinit var binding: FragListOfProductsBinding
     private val  sharedViewModel: ShoeViewModel by activityViewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this) {}
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

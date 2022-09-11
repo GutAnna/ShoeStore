@@ -12,18 +12,29 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:background="@color/colorPrimary"
+        android:layout_margin="2dp"
+        android:background="@color/backgroundLight"
         android:padding="4dp">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="60dp"
             android:layout_height="0dp"
+            android:layout_marginRight="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_shoe" />
+
+        <TextView
+            style="@style/whiteWithShadow"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="28dp"
+            android:rotation = "48"
+            android:text="NO IMAGE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image" />
 
         <TextView
             android:id="@+id/textViewName"
@@ -39,7 +50,7 @@
             android:id="@+id/textViewSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{Double.toString(shoe.size)}"
+            android:text="@{shoe.dataBindingSize}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="37" />

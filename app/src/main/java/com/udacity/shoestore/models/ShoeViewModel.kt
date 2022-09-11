@@ -10,7 +10,7 @@ class ShoeViewModel : ViewModel() {
         get() = _shoesList
 
     fun addShoe(
-        name: String, size: Double, company: String, description: String,
+        name: String, size: Double?, company: String, description: String,
         images: List<String> = mutableListOf()
     ) {
         val item = Shoe(name, size, company, description)
