@@ -38,7 +38,7 @@
 
         <TextView
             android:id="@+id/textViewName"
-            style="@style/welcome_to_"
+            style="@style/middle_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{shoe.name}"
