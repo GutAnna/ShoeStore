@@ -50,7 +50,7 @@
             android:id="@+id/editText_itemSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{Double.toString(shoe.size)}"
+            android:text="@={shoe.dataBindingSize}"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 

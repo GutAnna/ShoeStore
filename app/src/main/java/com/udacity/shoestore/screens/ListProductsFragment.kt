@@ -44,7 +44,6 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
                     true
                 )
                 itemProductBinding.shoe = item
-                //linearLayout.addView(itemProductBinding.root)
             }
         }
         val menuHost: MenuHost = requireActivity()
@@ -54,7 +53,6 @@ class ListProductsFragment : Fragment(R.layout.frag_list_of_products) {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                // Handle the menu selection
                 return when (menuItem.itemId) {
                     R.id.logout -> {
                         findNavController().navigate(R.id.loginFragment)
